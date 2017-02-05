@@ -1,17 +1,17 @@
-myCarousel
+#myCarousel1
     .container
         br
         #myCarousel.carousel.slide(data-ride='carousel')
             // Indicators
             ol.carousel-indicators
-                li.active(data-target='#myCarousel', data-slide-to='0')
+                li(data-target='#myCarousel', data-slide-to='0')
                 li(data-target='#myCarousel', data-slide-to='1')
-                li(data-target='#myCarousel', data-slide-to='2')
+                li.active(data-target='#myCarousel', data-slide-to='2')
                 li(data-target='#myCarousel', data-slide-to='3')
                 li(data-target='#myCarousel', data-slide-to='4')
             // Wrapper for slides
             .carousel-inner(role='listbox')
-                .item.active
+                .item
                     img(src='images/house1.jpg', alt='house')
                     .carousel-caption
                         h3 Amazing architecture
@@ -19,7 +19,7 @@ myCarousel
                     img(src='images/house3.jpg', alt='Unbelievable cottage')
                     .carousel-caption
                         h3 Unbelievable cottage
-                .item
+                .item.active
                     img(src='images/waterHouse.jpg', alt='Water House')
                     .carousel-caption
                         h3 The flutter House
