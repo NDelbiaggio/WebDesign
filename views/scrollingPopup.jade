@@ -1,4 +1,4 @@
-.scrollPopup
+#work.scrollPopup
   .section.animate
     .middle
       img(src='images/scrollingPopupImages/elec_main.png')
@@ -44,62 +44,61 @@
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
 
-  script.
-    $(document).ready(function() {
-      var sm = 480;
+script.
+  $(document).ready(function () {
+    var sm = 480;
 
-      function resizeThis() {
-        var imgH = $('.middle img').width();
-        if ($(window).width() >= sm) {
-          $('.left,.right,.section').css('height', imgH);
-        } else {
-          $('.left,.right,.section').css('height', 'auto');
-        }
+    function resizeThis() {
+      var imgH = $('.middle img').width();
+      if ($(window).width() >= sm) {
+        $('.left,.right,.section').css('height', imgH);
+      } else {
+        $('.left,.right,.section').css('height', 'auto');
       }
+    }
 
+    resizeThis();
+
+    $(window).resize(function () {
       resizeThis();
-
-      $(window).resize(function () {
-        resizeThis();
-      });
-
-
-      $(window).scroll(function () {
-        $('.section').each(function () {
-          var $elementPos = $(this).offset().top;
-          var $scrollPos = $(window).scrollTop();
-
-          var $sectionH = $(this).height();
-          var $h = $(window).height();
-          var $sectionVert = (($h / 2) - ($sectionH / 4));
-
-          if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-            $(this).addClass('animate');
-          } else {
-            $(this).removeClass('animate');
-          }
-        });
-      });
-
-      $('.btn-scrollPopup').click(function () {
-        alert('This can be used to redirect');
-      });
-
     });
 
-    /*
-     $(function() {
-     $('a[href*="#"]:not([href="#"])').click(function() {
-     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-     var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-     if (target.length) {
-     $('html, body').animate({
-     scrollTop: target.offset().top
-     }, 1000);
-     return false;
-     }
-     }
-     });
-     });
-     */
+    $(window).scroll(function () {
+      $('.section').each(function () {
+        var $elementPos = $(this).offset().top;
+        var $scrollPos = $(window).scrollTop();
+
+        var $sectionH = $(this).height();
+        var $h = $(window).height();
+        var $sectionVert = (($h / 2) - ($sectionH / 4));
+
+        if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+          $(this).addClass('animate');
+        } else {
+          $(this).removeClass('animate');
+        }
+      });
+    });
+
+    $('.btn-scrollPopup').click(function () {
+      alert('This can be used to redirect');
+    });
+
+  });
+
+  /*
+   $(function() {
+   $('a[href*="#"]:not([href="#"])').click(function() {
+   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+   var target = $(this.hash);
+   target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+   if (target.length) {
+   $('html, body').animate({
+   scrollTop: target.offset().top
+   }, 1000);
+   return false;
+   }
+   }
+   });
+   });
+   */

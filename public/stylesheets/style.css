@@ -7,4 +7,13 @@ a {
   color: #00B7FF;
 }
 
+#companyDesc {
+  position: relative;
+  z-index: 0;
+}
 
+#ourLuster {
+  position: absolute;
+  bottom: 89%;
+  z-index: 1;
+}
