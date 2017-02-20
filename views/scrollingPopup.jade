@@ -1,0 +1,110 @@
+.section.animate
+    .middle
+        img(src='https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+    .left.title
+        .content
+            h2 A glorious nature shot.
+            p
+                | Wow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.
+            a.btn-primary(href='#') Learn more
+    .right.tiles
+        img(src='https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+.section
+    .middle
+        img(src='https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+    .right.title
+        .content
+            h2 Check out this guy.
+            p
+                | What an interesting looking person! I wonder if they've ever climbed Mount Everest, or seen the Egyptian Pyramids. If not, I hope that one day they get to. You go random stock image person! Follow your dreams!
+    .left.tiles
+        img(src='https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+.section
+    .middle
+        img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+    .left.title
+        .content
+            h2 That is one pretty building.
+            p
+                | I once thought about becoming an architect. I wanted to create a house fit for a king. But then I failed maths. So I became a frontend developer instead.
+    .right.tiles
+        img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+.section
+    .middle
+        img(src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+    .right.title
+        .content
+            h2 The future is now.
+            p
+                | Check out that technology! Imagine if we went back in time and put one of those in the hands of a neanderthal. Do you think they'd be impressed, or just try to club us to death?
+    .left.tiles
+        img(src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+        img(src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+
+script.
+    $(document).ready(function(){
+        var $sm = 480;
+        var $md = 768;
+
+        function resizeThis() {
+            $imgH = $('.middle img').width();
+            if ($(window).width() >= $sm) {
+                $('.left,.right,.section').css('height', $imgH);
+            } else {
+                $('.left,.right,.section').css('height', 'auto');
+            }
+        }
+
+        resizeThis();
+
+        $(window).resize(function(){
+            resizeThis();
+        });
+
+        $(window).scroll(function() {
+            $('.section').each(function(){
+                var $elementPos = $(this).offset().top;
+                var $scrollPos = $(window).scrollTop();
+
+                var $sectionH = $(this).height();
+                var $h = $(window).height();
+                var $sectionVert = (($h/2)-($sectionH/4));
+
+                if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+                    $(this).addClass('animate');
+                } else {
+                    $(this).removeClass('animate');
+                }
+            });
+        });
+
+        $('.btn-primary').click(function(){
+            alert('I lied');
+        });
+    });
+
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
