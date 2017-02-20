@@ -38,21 +38,21 @@ body {
 
   a {
     color: #fff;
-}
+  }
   //box-sizing: border-box;
 
   @media (min-width: $md) {
-  padding: 100px 30px;
-}
+    padding: 100px 30px;
+  }
 
   h1 {
     font-size: 4em;
     font-weight: 300;
-}
+  }
 
   i.fa {
     font-size: 4em;
-}
+  }
 
   .bounce {
     -webkit-animation-name: bounce;
@@ -61,14 +61,14 @@ body {
     transform-origin: center bottom;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
-}
+  }
 
   .animated {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-}
+  }
 }
 
 .section {
@@ -90,70 +90,70 @@ body {
 
     .content {
       @media (min-width: $sm) {
-      @include vertical-align();
+        @include vertical-align();
+      }
     }
-  }
 
     @media (min-width: $sm) {
-    width: 50%;
-    font-size:0.9em;
-    padding: 10px;
-    left: 0;
-    float: left;
-    position: absolute;
-  }
+      width: 50%;
+      font-size:0.9em;
+      padding: 10px;
+      left: 0;
+      float: left;
+      position: absolute;
+    }
 
     @media (min-width: $md) {
-    width: 33.33333%;
-    left: 33.33%;
-    padding: 10px;
-  }
+      width: 33.33333%;
+      left: 33.33%;
+      padding: 10px;
+    }
 
     @media (min-width: $lg) {
-    padding: 30px;
-    font-size: 1em;
+      padding: 30px;
+      font-size: 1em;
+    }
   }
-}
 
   &.animate {
     .left {
       left:0;
 
       @media (min-width: $sm) {
-      left: 50%;
-    }
+        left: 50%;
+      }
 
       @media (min-width: $md) {
-      left:0;
+        left:0;
+      }
     }
-  }
 
     .right {
       left:0;
 
       @media (min-width: $sm) {
-      left: 50%;
-    }
+        left: 50%;
+      }
 
       @media (min-width: $md) {
-      left:66.66%;
+        left:66.66%;
+      }
     }
+
+
   }
-
-
-}
 
   .title {
     background: tomato;
 
     h2 {
       margin-top:0;
-  }
+    }
 
     p {
       line-height:1.55em;
       margin-bottom: 0.75em;
-  }
+    }
 
     .btn-primary {
       color: #fff;
@@ -166,10 +166,10 @@ body {
 
       &:hover {
         background: darken(tomato, 15%);
-    }
+      }
 
+    }
   }
-}
 
   .tiles {
     padding:0;
@@ -190,13 +190,13 @@ body {
       &:hover {
         opacity:1;
         @include filter(grayscale(0%));
+      }
     }
-  }
 
     @media (min-width: $md) {
-    display:block;
+      display:block;
+    }
   }
-}
 
   .middle {
     background: slategray;
@@ -207,8 +207,8 @@ body {
       width: 100%;
       height: auto;
       display:block;
+    }
   }
-}
 }
 
 @-webkit-keyframes bounce {
