@@ -10,10 +10,10 @@
           | We are concerned about it and we work to provide the best service possible.
         .btn-scrollPopup Learn more
     .right.tiles
-      img(src='images/scrollingPopupImages/elec_lustre.png')
-      img(src='images/scrollingPopupImages/elec_panels.png')
-      img(src='images/scrollingPopupImages/elec_worker.png')
-      img(src='images/scrollingPopupImages/elec_outside.png')
+      img(src='images/scrollingPopupImages/elec_lustre.png' id="elec_luster")
+      img(src='images/scrollingPopupImages/elec_panels.png' id="elec_panels")
+      img(src='images/scrollingPopupImages/elec_worker.png' id="elec_worker")
+      img(src='images/scrollingPopupImages/elec_outside.png' id="elec_outside")
   .section.plaster
     .middle
       img(src='images/scrollingPopupImages/plaster_intwall.png')
@@ -24,10 +24,10 @@
           | TODO
         .btn-scrollPopup Learn more
     .left.tiles
-      img(src='images/scrollingPopupImages/plaster_ceiling.png')
-      img(src='images/scrollingPopupImages/plaster_worker.png')
-      img(src='images/scrollingPopupImages/plaster_intwall.png')
-      img(src='images/scrollingPopupImages/plaster_extwall.png')
+      img(src='images/scrollingPopupImages/plaster_ceiling.png' id="plaster_ceiling")
+      img(src='images/scrollingPopupImages/plaster_worker.png' id="plaster_worker")
+      img(src='images/scrollingPopupImages/plaster_intwall.png' id="plaster_intwall")
+      img(src='images/scrollingPopupImages/plaster_extwall.png' id="plaster_extwall")
   .section
     .middle
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
@@ -43,6 +43,19 @@
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
       img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+
+#scrollModal.container.modal.fade(role="dialog")
+  .modal-dialog.modal-content
+    .modal-header(style="padding:35px 50px;")
+    .modal-body(style='padding:40px 50px;')
+    .modal-footer
+
+script.
+  $(document).ready(function () {
+    $(".tiles").click(function(e){
+      $("#scrollModal").modal();
+    });
+  });
 
 script.
   $(document).ready(function () {

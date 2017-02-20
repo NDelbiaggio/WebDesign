@@ -6,6 +6,10 @@ body {
 a {
   color: #00B7FF;
 }
+#companyName {
+  position: relative;
+  z-index: 2;
+}
 
 #companyDesc {
   position: relative;
@@ -14,6 +18,6 @@ a {
 
 #ourLuster {
   position: absolute;
-  bottom: 89%;
+  bottom: 85%;
   z-index: 1;
 }
