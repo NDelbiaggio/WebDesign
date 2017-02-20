@@ -6,8 +6,23 @@ body {
 a {
     color: #00B7FF;
 }
+#companyName {
+  position: relative;
+  z-index: 2;
+}
 
 #headerQuote {
     background-color: #3e9c39;
     text-align: center;
+}
+
+#companyDesc {
+  position: relative;
+  z-index: 0;
+}
+
+#ourLuster {
+  position: absolute;
+  bottom: 85%;
+  z-index: 1;
 }
