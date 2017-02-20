@@ -1,105 +1,105 @@
 .scrollPopup
-    .section.animate
-        .middle
-            img(src='images/scrollingPopupImages/elec_main.png')
-        .left.title.titleElectricity
-            .content
-                h2 Power up your house.
-                p
-                    | Electricity is nowadays the main requirement in a house to feel confortable.
-                    | We are concerned about it and we work to provide the best service possible.
-                .btn-scrollPopup Learn more
-        .right.tiles
-            img(src='images/scrollingPopupImages/elec_lustre.png')
-            img(src='images/scrollingPopupImages/elec_panels.png')
-            img(src='images/scrollingPopupImages/elec_worker.png')
-            img(src='images/scrollingPopupImages/elec_outside.png')
-    .section.animate.plaster
-        .middle
-            img(src='images/scrollingPopupImages/plaster_intwall.png')
-        .right.title.titlePlaster
-            .content
-                h2 Decorating your walls.
-                p
-                    | TODO
-                .btn-scrollPopup Learn more
-        .left.tiles
-            img(src='images/scrollingPopupImages/plaster_ceiling.png')
-            img(src='images/scrollingPopupImages/plaster_worker.png')
-            img(src='images/scrollingPopupImages/plaster_intwall.png')
-            img(src='images/scrollingPopupImages/plaster_extwall.png')
-    .section.animate
-        .middle
-            img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
-        .left.title.titlePlaquetry
-            .content
-                h2 Warm up your floor.
-                p
-                    | The floor of a house is used every day. That is the reason why we want that each customer has the best
-                    | quality plaquetry to warm up their interior.
-                .btn-scrollPopup Learn more
-        .right.tiles
-            img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
-            img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
-            img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
-            img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+  .section.animate
+    .middle
+      img(src='images/scrollingPopupImages/elec_main.png')
+    .left.title.titleElectricity
+      .content
+        h2 Power up your house.
+        p
+          | Electricity is nowadays the main requirement in a house to feel confortable.
+          | We are concerned about it and we work to provide the best service possible.
+        .btn-scrollPopup Learn more
+    .right.tiles
+      img(src='images/scrollingPopupImages/elec_lustre.png')
+      img(src='images/scrollingPopupImages/elec_panels.png')
+      img(src='images/scrollingPopupImages/elec_worker.png')
+      img(src='images/scrollingPopupImages/elec_outside.png')
+  .section.plaster
+    .middle
+      img(src='images/scrollingPopupImages/plaster_intwall.png')
+    .right.title.titlePlaster
+      .content
+        h2 Decorating your walls.
+        p
+          | TODO
+        .btn-scrollPopup Learn more
+    .left.tiles
+      img(src='images/scrollingPopupImages/plaster_ceiling.png')
+      img(src='images/scrollingPopupImages/plaster_worker.png')
+      img(src='images/scrollingPopupImages/plaster_intwall.png')
+      img(src='images/scrollingPopupImages/plaster_extwall.png')
+  .section
+    .middle
+      img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+    .left.title.titlePlaquetry
+      .content
+        h2 Warm up your floor.
+        p
+          | The floor of a house is used every day. That is the reason why we want that each customer has the best
+          | quality plaquetry to warm up their interior.
+        .btn-scrollPopup Learn more
+    .right.tiles
+      img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+      img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+      img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
+      img(src='https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80')
 
-    script.
-        $(document).ready(function(){
-            var $sm = 480;
-            var $md = 768;
+  script.
+    $(document).ready(function() {
+      var sm = 480;
 
-            function resizeThis() {
-                $imgH = $('.middle img').width();
-                if ($(window).width() >= $sm) {
-                    $('.left,.right,.section').css('height', $imgH);
-                } else {
-                    $('.left,.right,.section').css('height', 'auto');
-                }
-            }
+      function resizeThis() {
+        var imgH = $('.middle img').width();
+        if ($(window).width() >= sm) {
+          $('.left,.right,.section').css('height', imgH);
+        } else {
+          $('.left,.right,.section').css('height', 'auto');
+        }
+      }
 
-            resizeThis();
+      resizeThis();
 
-            $(window).resize(function(){
-                resizeThis();
-            });
+      $(window).resize(function () {
+        resizeThis();
+      });
 
-            $(window).scroll(function() {
-                $('.section').each(function(){
-                    var $elementPos = $(this).offset().top;
-                    var $scrollPos = $(window).scrollTop();
 
-                    var $sectionH = $(this).height();
-                    var $h = $(window).height();
-                    var $sectionVert = (($h/2)-($sectionH/4));
+      $(window).scroll(function () {
+        $('.section').each(function () {
+          var $elementPos = $(this).offset().top;
+          var $scrollPos = $(window).scrollTop();
 
-                    if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-                        $(this).addClass('animate');
-                    } else {
-                        $(this).removeClass('animate');
-                    }
-                });
-            });
+          var $sectionH = $(this).height();
+          var $h = $(window).height();
+          var $sectionVert = (($h / 2) - ($sectionH / 4));
 
-            $('.btn-scrollPopup').click(function(){
-                alert('This can be used to redirect');
-            });
+          if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+            $(this).addClass('animate');
+          } else {
+            $(this).removeClass('animate');
+          }
         });
-        /*
+      });
 
-        $(function() {
-            $('a[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
+      $('.btn-scrollPopup').click(function () {
+        alert('This can be used to redirect');
+      });
 
-        */
+    });
+
+    /*
+     $(function() {
+     $('a[href*="#"]:not([href="#"])').click(function() {
+     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+     var target = $(this.hash);
+     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+     if (target.length) {
+     $('html, body').animate({
+     scrollTop: target.offset().top
+     }, 1000);
+     return false;
+     }
+     }
+     });
+     });
+     */
