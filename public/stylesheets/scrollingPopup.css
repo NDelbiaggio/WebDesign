@@ -154,7 +154,7 @@ body {
   margin-bottom: 0.75em;
 }
 
-.section .title .btn-primary {
+.section .title .btn-scrollPopup {
   color: #fff;
   padding: 10px;
   text-decoration: none;
@@ -166,16 +166,16 @@ body {
   transition: 0.3s ease-in-out all;
 }
 
-.section .title .btn-primary:hover {cursor: pointer;}
+.section .title .btn-scrollPopup:hover {cursor: pointer;}
 
 /* BTN COLOR + EFFECT ON MOUSE HOVER */
-.section .titleElectricity .btn-primary {background: #ff3814;}
-.section .titlePlaster .btn-primary {background: #94907a;}
-.section .titlePlaquetry .btn-primary {background: #ac7c30;}
+.section .titleElectricity .btn-scrollPopup {background: #ff3814;}
+.section .titlePlaster .btn-scrollPopup {background: #94907a;}
+.section .titlePlaquetry .btn-scrollPopup {background: #ac7c30;}
 
-.section .titleElectricity .btn-primary:hover {background: #ec2600;}
-.section .titlePlaster .btn-primary:hover {background: #7d7963;}
-.section .titlePlaquetry .btn-primary:hover {background: #855d28;}
+.section .titleElectricity .btn-scrollPopup:hover {background: #ec2600;}
+.section .titlePlaster .btn-scrollPopup:hover {background: #7d7963;}
+.section .titlePlaquetry .btn-scrollPopup:hover {background: #855d28;}
 
 /* IMG SQUARES */
 .section .tiles {
@@ -253,3 +253,4 @@ body {
     transform: translateY(-10px);
   }
 }
+
