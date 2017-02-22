@@ -10,12 +10,11 @@
 function start() {
   httpGetAsync('http://localhost:3000/api/company', function(res){
     var data = JSON.parse(res);
-    console.log(data);
+    console.log("client.js to modify, res: " + data);
   });
 }
 
-function httpGetAsync(theUrl, callback)
-{
+function httpGetAsync(theUrl, callback) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)

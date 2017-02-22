@@ -1,48 +1,17 @@
+#customizedModal.modal-dialog{
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-img: 'images/house1.jpg';
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
+
 body {
   font-family: 'Roboto', sans-serif;
 }
-
-/*
-.header, .footer {
-  background: #2e2e2e;
-  color: #fff;
-  padding: 30px;
-  text-align: center;
-}
-
-.header a, .footer a {
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .header, .footer {
-    padding: 100px 30px;
-  }
-}
-.header h1, .footer h1 {
-  font-size: 4em;
-  font-weight: 300;
-}
-.header i.fa, .footer i.fa {
-  font-size: 4em;
-}
-.header .bounce, .footer .bounce {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-.header .animated, .footer .animated {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-*/
 
 .section {
   width: 100%;
@@ -64,7 +33,6 @@ body {
   transition: 0.3s ease-in-out all;
 }
 
-/* DELETED .section .middle .content, */
 @media (min-width: 480px) {
   .section .left .content, .section .middle .content, .section .right .content {
     position: relative;
@@ -99,8 +67,9 @@ body {
   }
 }
 
-.section.animate .left {
+.section.animate .left .content{
   left: 0;
+  text-align: left;
   /*align-content: right;*/
 }
 
@@ -116,8 +85,9 @@ body {
   }
 }
 
-.section.animate .right {
+.section.animate .right .content {
   left: 0;
+  text-align: right;
   /*align-content: left;*/
 }
 
