@@ -1,0 +1,89 @@
+#aboutUs{
+  position: relative;
+  background-color: #ffffff;
+  height: 350px;
+  width: 100vw;
+  overflow:hidden;
+}
+
+#aboutUs .btnSlider {
+  display: table;
+  position: absolute;
+  background-color: #f1ce51;
+  width: 70px;
+  bottom: calc(50% - 35px);
+  transition: width .7s;
+  -webkit-transition: width .7s;
+}
+
+#aboutUs .btnSlider:hover{
+  background-color: #d5b24e;
+  cursor: pointer;
+  width: 80px;
+}
+
+#mySlider .btnSlider-more{
+  border-top-left-radius: 35%;
+  border-bottom-left-radius: 35%;
+  right: 0;
+  animation-name: example;
+  animation-duration: .9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: .9s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate-reverse;
+}
+
+#aboutUs .btnSlider h3{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+#slider_hidden .btnSlider-less {
+  border-bottom-right-radius: 35%;
+  border-top-right-radius: 35%;
+}
+
+#slider_hidden .btnSlider-less h3{
+  text-align: right;
+}
+
+#slider_hidden {
+  position: absolute;
+  display: inline;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: #ffdc51;
+  border-bottom-left-radius: 5%;
+  border-top-left-radius: 5%;
+  overflow-x: hidden;
+  transform: translateX(50vw);
+  transition: transform .5s;
+}
+
+#slider_hidden.show {
+  left: 50vw;
+  transform: translateX(0vw);
+}
+
+#slider_hidden .slider_content {
+  position:absolute;
+  left: 70px;
+}
+
+@-webkit-keyframes example {
+  from{background-color: #f1ce51;}
+  to{background-color: #e5d8d9;}
+}
+
+@keyframes example {
+  from{background-color: #f1ce51;}
+  to{background-color: #e5d8d9;}
+}
