@@ -1,0 +1,35 @@
+//Created by fredericlopesgoncalvesmagalhaes on 22.02.17.
+
+#aboutUs.container
+  h1 My Introduction
+  #mySlider
+    .btnSlider.btnSlider-more(onclick='mySlider()')
+      h4 More
+    #slider_hidden
+      .btnSlider.btnSlider-less(onclick='mySlider()')
+        h4 Back
+      .slider_content
+        h1 Some extra text
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+  script.
+    function mySlider() {
+      var hiddenPage = document.getElementById("slider_hidden");
+      if (hiddenPage.classList.contains("show")) {
+        hiddenPage.classList.remove("show");
+      } else {
+        hiddenPage.classList.add("show");
+        //elem.classList.remove("show");
+      }
+    }
