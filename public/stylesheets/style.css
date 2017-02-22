@@ -6,6 +6,7 @@ body {
 a {
     color: #00B7FF;
 }
+
 #companyName {
   position: relative;
   z-index: 2;
@@ -21,6 +22,12 @@ a {
   z-index: 0;
 }
 
+@media (max-width: 40em) {
+  #ourLuster {
+    display: none;
+  }
+
+}
 #ourLuster {
   position: absolute;
   bottom: 85%;
