@@ -4,23 +4,28 @@
   height: 350px;
   width: 100vw;
   overflow:hidden;
+  margin-bottom: 20px;
 }
 
 #aboutUs .btnSlider {
+  /*
   display: table;
+  */
+  vertical-align: middle;
   position: absolute;
-  background-color: #f1ce51;
-  width: 70px;
+  background-color: #c8c4ae;
+  width: 50px;
   bottom: calc(50% - 35px);
   transition: width .7s;
   -webkit-transition: width .7s;
 }
 
 #aboutUs .btnSlider:hover{
-  background-color: #d5b24e;
+  background-color: #beb793;
   cursor: pointer;
   width: 80px;
 }
+
 
 #mySlider .btnSlider-more{
   border-top-left-radius: 35%;
@@ -38,10 +43,12 @@
   -webkit-animation-direction:alternate-reverse;
 }
 
-#aboutUs .btnSlider h3{
+#aboutUs .btnSlider h4{
+  /*
   display: table-cell;
   vertical-align: middle;
-  padding: 10px;
+  */
+  padding: 5px;
 }
 
 #slider_hidden .btnSlider-less {
@@ -49,7 +56,7 @@
   border-top-right-radius: 35%;
 }
 
-#slider_hidden .btnSlider-less h3{
+#slider_hidden .btnSlider-less h4{
   text-align: right;
 }
 
@@ -60,7 +67,7 @@
   right: 0;
   width: 50vw;
   height: 100%;
-  background-color: #ffdc51;
+  background-color: #d7d3bc;
   border-bottom-left-radius: 5%;
   border-top-left-radius: 5%;
   overflow-x: hidden;
@@ -75,15 +82,15 @@
 
 #slider_hidden .slider_content {
   position:absolute;
-  left: 70px;
+  left: 75px;
 }
 
 @-webkit-keyframes example {
-  from{background-color: #f1ce51;}
-  to{background-color: #e5d8d9;}
+  from{background-color: #c8c4ae;}
+  to{background-color: #efefe8;}
 }
 
 @keyframes example {
-  from{background-color: #f1ce51;}
-  to{background-color: #e5d8d9;}
+  from{background-color: #c8c4ae;}
+  to{background-color: #efefe8;}
 }
