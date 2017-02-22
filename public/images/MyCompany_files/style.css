@@ -1,0 +1,69 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    position: relative;
+}
+
+a {
+    color: #00B7FF;
+}
+#companyName {
+  position: relative;
+  z-index: 2;
+}
+
+#companyDesc {
+  position: relative;
+  z-index: 0;
+}
+
+#ourLuster {
+  position: absolute;
+  bottom: 85%;
+  z-index: 1;
+}
+
+
+/*Nico - quote*/
+#logo-sm{
+    width: 50%;
+}
+
+#headerQuote {
+    background-image: url("/images/parquetery1.jpeg");
+    background-size: cover;
+    text-align: center;
+}
+
+#sectionQuote{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#myQuote{
+    /*background-image: url("/images/parqueteryWall.jpg");*/
+
+}
+
+.secLine{
+    width: 100%;
+    color: black;
+    height: 1px;
+    background-color:black;
+    margin: 0px;
+}
+
+
+/*Google maps*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map{
+    height:70%;
+    width: 50vw;
+}
+
+
