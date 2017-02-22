@@ -26,3 +26,27 @@ a {
   bottom: 85%;
   z-index: 1;
 }
+
+
+/*Nico*/
+#logo-sm{
+    width: 50%;
+}
+
+#sectionQuote{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#myQuote{
+    /*margin-top: 15px;*/
+}
+
+.secLine{
+    width: 100%;
+    color: black;
+    height: 1px;
+    background-color:black;
+    margin: 0px;
+}

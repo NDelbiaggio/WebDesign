@@ -7,25 +7,26 @@
         li(data-target='#myCarousel', data-slide-to='3')
         li(data-target='#myCarousel', data-slide-to='4')
     // Wrapper for slides
-    .carousel-inner(role='listbox')
+    //(role='listbox')
+    .carousel-inner
         .item
-            img(src='images/house1.jpg', alt='house')
+            img.img-responsive.center-block(src='images/house1.jpg', alt='house')
             .carousel-caption
                 h3 Amazing architecture
         .item
-            img(src='images/house3.jpg', alt='Unbelievable cottage')
+            img.img-responsive.center-block(src='images/house3.jpg', alt='Unbelievable cottage')
             .carousel-caption
                 h3 Unbelievable cottage
         .item.active
-            img(src='images/waterHouse.jpg', alt='Water House')
+            img.img-responsive.center-block(src='images/waterHouse.jpg', alt='Water House')
             .carousel-caption
                 h3 The flutter House
         .item
-            img(src='images/house2.jpg', alt='Luxury House')
+            img.img-responsive.center-block(src='images/house2.jpg', alt='Luxury House')
             .carousel-caption
                 h3 Luxury House
         .item
-            img(src='images/house4.jpg', alt='Cubic House')
+            img.img-responsive.center-block(src='images/house4.jpg', alt='Cubic House')
             .carousel-caption
                 h3 The cubic House
 
