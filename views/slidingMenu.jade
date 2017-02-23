@@ -1,8 +1,8 @@
 //Created by fredericlopesgoncalvesmagalhaes on 22.02.17.
 #aboutUs.container
   .row
-    .col-xs-12.col-sm-12.col-md-6.col-lg-6
-      h1 The company
+    .col-xs-12.col-sm-6.col-md-6.col-lg-6
+      h1 DELONIFR
       p Created in 2015, DELONIFR started working in two domains:
       ul
         li Electricity
@@ -11,12 +11,12 @@
         | Since, we improved our way of working and bring a new domain to the list
         span the parquetry
         | which is completing our working areas to create designed and welcoming houses.
-    .col-xs-12.col-sm-12.col-md-6.col-lg-6
+    .col-xs-12.col-sm-6.col-md-6.col-lg-6
       h2 From dream to reality
       p
         | In 2010, during a beer talk, we started talking about creating a company that would be able to combine the construction
         | and the art of design.
-      p Unfortunatelly, there is a huge gap between both areas and the competition is rough..
+      p Unfortunately, there is a huge gap between both areas and the competition is rough..
       p Two years later, in the same bar, the same idea came back but this time we decided to take risks and start working
         | on the basements of the company to launch it. Everything started like a hobby without any goal of success, it was
         | a try for a try.
@@ -27,18 +27,19 @@
       #slider_hidden
         .btnSlider.btnSlider-less(onclick='mySlider()')
           h4 Back
-        .slider-content.row
-          .myCol-content.col-sm-12.col-md-9.col-lg-9
-            h3 The founders
-            p
-              | Two friends: Frederic & Nicolas founded DELONIFR
-            p
-              strong Sometimes, drinking a beer can merge a good idea
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            p To finalize
-          .myColmedal.col-sm-12.col-md-3.col-lg-3
-            img(src="/images/founder_fred.png" class="roundedImageShadow")
-            img(src="/images/founder_fred.png" class="roundedImageShadow")
+        .slider-content.row(style="height:100%;")
+            .col-sm-8.col-md-8.col-lg-8
+              h3 The founders
+              p
+                | Two friends: Frederic & Nicolas founded DELONIFR in 2015.
+              p
+                strong "Sometimes, drinking a beer can merge a good idea"
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .col-sm-4.col-md-4.col-lg-4(style="height:100%; weight:100%;")
+              div(style="display:inline-block; height:50%;")
+                img(src="/images/founder_fred.png" class="roundedImageShadow" style="position:relative;top:50%; transform:translate(0, -50%);")
+              div(style="display:inline-block; height:50%; weight:100%;")
+                img(src="/images/founder_fred.png" class="roundedImageShadow" style="position:relative; top:50%; transform:translate(0, -50%);")
 
   script.
     function mySlider() {

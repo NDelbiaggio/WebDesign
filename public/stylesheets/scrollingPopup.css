@@ -112,7 +112,7 @@ body {
 }
 
 .section .titlePlaquetry {
-  background: #cb9a2f;
+  background: #a28975;
 }
 
 .section .title h2 {
@@ -141,11 +141,11 @@ body {
 /* BTN COLOR + EFFECT ON MOUSE HOVER */
 .section .titleElectricity .btn-scrollPopup {background: #ff3814;}
 .section .titlePlaster .btn-scrollPopup {background: #94907a;}
-.section .titlePlaquetry .btn-scrollPopup {background: #ac7c30;}
+.section .titlePlaquetry .btn-scrollPopup {background: #836d5c;}
 
 .section .titleElectricity .btn-scrollPopup:hover {background: #ec2600;}
 .section .titlePlaster .btn-scrollPopup:hover {background: #7d7963;}
-.section .titlePlaquetry .btn-scrollPopup:hover {background: #855d28;}
+.section .titlePlaquetry .btn-scrollPopup:hover {background: #604f45;}
 
 /* IMG SQUARES */
 .section .tiles {

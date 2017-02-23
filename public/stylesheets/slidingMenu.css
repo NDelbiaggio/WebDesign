@@ -17,8 +17,10 @@
   background-color: #c8c4ae;
   width: 50px;
   bottom: calc(50% - 25px);
-  transition: width .7s;
-  -webkit-transition: width .7s;
+  transition: .3s ease-in-out, width .7s;
+  -webkit-transition: .3s ease-in-out, width .7s;
+  -moz-transition: .7s ease-in-out all;
+  -o-transition: .7s ease-in-out all;
 }
 
 #mySlider .btnSlider:hover{
@@ -28,15 +30,15 @@
 }
 
 #mySlider .btnSlider-more {
-  border-top-left-radius: 35%;
-  border-bottom-left-radius: 35%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   right: 0;
-  animation-name: example;
+  animation-name: ligtheningBtn;
   animation-duration: .9s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
-  -webkit-animation-name: example;
+  -webkit-animation-name: ligtheningBtn;
   -webkit-animation-duration: .9s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -45,6 +47,7 @@
 
 #aboutUs .btnSlider h4{
   padding: 5px;
+  opacity: 0.5;
 }
 
 #slider_hidden {
@@ -67,8 +70,8 @@
 }
 
 #slider_hidden .btnSlider-less {
-  border-bottom-right-radius: 35%;
-  border-top-right-radius: 35%;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 #slider_hidden .btnSlider-less h4{
@@ -77,21 +80,21 @@
 
 #slider_hidden .slider-content {
   position:absolute;
-  padding: 20px;
   left: 75px;
   /*
+  padding: 20px;
   display: table-cell;
   */
 }
 
-@-webkit-keyframes example {
-  from{background-color: #c8c4ae;}
-  to{background-color: #efefe8;}
+@-webkit-keyframes ligtheningBtn {
+  from{background-color: rgba(200, 196, 174, 0.65);}
+  to{background-color: rgba(239, 239, 232, 0.65);}
 }
 
-@keyframes example {
-  from{background-color: #c8c4ae;}
-  to{background-color: #efefe8;}
+@keyframes ligtheningBtn {
+  from{background-color: rgba(200, 196, 174, 0.65);}
+  to{background-color: rgba(239, 239, 232, 0.65);}
 }
 
 #slider_hidden .slider-content div, .medal{
@@ -117,7 +120,7 @@
   border: 1px solid #006699;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #mySlider {
     display: inherit;
   }
