@@ -46,11 +46,6 @@ a {
     align-content: center;
 }
 
-#myQuote{
-    /*background-image: url("/images/parqueteryWall.jpg");*/
-
-}
-
 .secLine{
     width: 100%;
     color: black;
@@ -67,10 +62,7 @@ html, body {
     padding: 0;
 }
 
-#map{
-    height:70%;
-    width: 50vw;
-}
+
 
 /*footer*/
 footer {
@@ -79,8 +71,39 @@ footer {
     padding: 32px;
 }
 
+
 #myQuote {
   background-image: url("/images/parquetry_test.jpg");
   background-size: cover;
 }
 
+
+/*temp*/
+body {
+    background-color:#CCC
+}
+
+/*#map{
+    height:100%;
+    width: 50vw;
+    margin:0px;
+}*/
+#map-outer #address{
+    padding-left: 0;
+}
+
+#map {
+    height: 440px;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color:#FFF
+}
+#map-container {
+    height: 400px
+}
+@media all and (max-width: 991px) {
+    #map-outer  {
+        height: 650px
+    }
+}
