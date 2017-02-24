@@ -2,92 +2,16 @@ hr.secLine
 #myQuote
     .container
         #sectionQuote.row
-            .col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
+            #quoteDesc.col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
                 h1 Looking for a quote
                 p Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
             #btnRequest.col-4.col-sm-4.col-md-4.col-lg-4.col-lx-4.col-offset-1.col-sm-offset-1.col-md-offset-1.col-lg-offset-1.col-lx-offset-1
-
                 button#myBtn.btn.btn-default.btn-lg(type='button') Request
 
-                #myModal.modal.fade(role="dialog")
-                    .modal-dialog
-                        .modal-content
-                            #headerQuote.modal-header(style="padding:35px 50px;")
-                                button.close(type='button', data-dismiss='modal') ×
-                                img#logo-sm(src="images/header_company.png")
-                                h4 Ask for a quote
-
-                            .modal-body(style='padding:40px 50px;')
-                                form(role='form')
-                                    .form-group
-                                        label(for='custNo')
-                                            |  Customer number
-                                        input#custNo.form-control(type='text', placeholder='Enter your customer number')
-                                    .row
-                                        .form-group.col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
-                                            label(for='firstName')
-                                                |  First Name
-                                            input#firstName.form-control(type='text', placeholder='Enter your first name' required="required")
-                                        .form-group.col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
-                                            label(for='lastName')
-                                                |  Last Name
-                                            input#lastName.form-control(type='text', placeholder='Enter your last name' required="required")
-                                    .row
-                                        .form-group.col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
-                                            label(for="lstCountries")
-                                                | Phone number country
-                                            select#lstCountries.form-control(onchange="loadFormat()")
-                                        .form-group.col-6.col-sm-6.col-md-6.col-lg-6.col-lx-6
-                                            label(for="number")
-                                                | &nbsp;
-                                            .input-group
-                                                span.input-group-addon
-                                                    i.glyphicon.glyphicon-phone-alt
-                                                        | &nbsp;
-                                                    span#phoneNumber
-
-                                                input#number.form-control.bfh-phone(type='text', data-country='countries_phone1')
-                                    .form-group
-                                        label(for="custEmail")
-                                            | Email address
-                                        .input-group
-                                            span.input-group-addon
-                                                i.glyphicon.glyphicon-envelope
-                                            input#custEmail.form-control(type='text', placeholder='email_address@mail.com' required="required")
-                                    .form-group
-                                        label(for='typeOfWork')
-                                            | Type of work
-                                        select#typeOfWork.form-control
-                                            option renovation
-                                            option construction
-                                    .form-group
-                                        label(for='textarea')
-                                            | Description
-                                        textarea#textarea(required="required")
-
-                                    button.btn.btn-success.btn-block(type='submit')
-                                        |  Submit
-
-                            .modal-footer
-                                button.btn.btn-danger.btn-default.pull-left(type='submit', data-dismiss='modal')
-                                    span.glyphicon.glyphicon-remove
-                                    |  Cancel
-                                p
-                                    | Contact us for more information
-                                p
-                                    span
-                                        i.glyphicon.glyphicon-phone-alt
-                                        | &nbsp; +358 345 23 43
     hr.secLine
 
 
-    script.
-        $("#number").on("keypress keyup blur", function (event) {
-            $(this).val($(this).val().replace(/[^\d].+/, ""));
-            if ((event.which < 48 || event.which > 57)) {
-                event.preventDefault();
-            }
-        });
+
 
 
     script.
@@ -97,7 +21,7 @@ hr.secLine
             });
         });
 
-    script(src = "javascripts/phoneNumbers.js")
+
         
 
 
