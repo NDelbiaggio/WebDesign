@@ -16,6 +16,18 @@ nav(class="navbar navbar-inverse navbar-fixed-top" id="navbar1")
                     a(href="#work") Work
                 li
                     a(href="#myQuote") Contact
+                li.dropdown.dropDownLanguages
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                    | Language
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a.french(href="http://localhost:3000/french") Français
+                    li
+                      a.english(href="http://localhost:3000/") English
+
+
+
 
     script.
       $("#navbar1").hide(); // Hide the navigation bar first

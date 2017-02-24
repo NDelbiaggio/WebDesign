@@ -1,4 +1,6 @@
+
 .languages {
+  display: none;
   right: 10px;
   position: fixed;
   margin-top: 7px;
@@ -14,6 +16,12 @@
   overflow: hidden;
 }
 
+.languages .french, .languages .english {
+  opacity: 0.6;
+  width: 32px;
+  heigth: 24px;
+  overflow: hidden;
+}
 .languages .french:hover, .languages .english:hover{
   opacity: 0.9;
 }
@@ -22,4 +30,13 @@
 }
 .languages .english img {
   margin-left: -32px;
+}
+
+@media (min-width: 768px) {
+  .languages{
+    display:inherit;
+  }
+  #myNavbar .li.dropDownLanguages {
+    display: none;
+  }
 }
