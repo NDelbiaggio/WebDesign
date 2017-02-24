@@ -4,7 +4,53 @@
   height: 100vh;
 }
 
+#mainPage #slogan {
+  position: relative;
+  text-align: center;
+  opacity: 1;
+  width: 100%;
+  color: white;
+
+  font-family: "Open Sans";
+  font-size: 2vw;
+  transition: opacity 2.5s ease;
+  -webkit-transition: opacity 2.5s ease;
+}
+
+#mother{
+  width: 100%;
+  height: 100%;
+}
+
+#up{
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+#superUp{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
 #mainPage ul.fly-in-text{
+  white-space:nowrap;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+  vertical-align: middle;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0%);
+}
+
+/*#mainPage ul.fly-in-text{
   display: block;
   white-space:nowrap;
   position:absolute;
@@ -15,7 +61,7 @@
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
-}
+}*/
 
 .fly-in-text li{
   display: inline-block;
