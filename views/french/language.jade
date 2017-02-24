@@ -1,0 +1,11 @@
+.languages
+    a.french(href="http://localhost:3000/french")
+        img(src="images/languages.png" name="french" onclick="languageChanged(this)")
+    a.english(href="http://localhost:3000/")
+        img(src="images/languages.png" name="english" onclick="languageChanged(this)")
+
+    script.
+        function languageChanged(e){
+            var language = e.name;
+            console.log(e.name);
+        }
