@@ -1,2 +1,28 @@
-#companyName.container
+//#companyName.container
     img(class="img-responsive" src="images/header_company.png")
+
+#mainPage
+  div#mother
+    div#up
+      div#superUp
+        ul.fly-in-text.unshown
+          li D
+          li E
+          li L
+          li O
+          li N
+          li I
+          li F
+          li R
+    #slogan.unshown swiss made
+
+  script.
+    $(function () {
+      setTimeout(function () {
+        $('.fly-in-text').removeClass('unshown');
+      }, 300);
+
+      setTimeout(function () {
+        $('.fly-in-text').removeClass('unshown');
+      }, 2800);
+    });
