@@ -1,28 +1,37 @@
-.navbar
-    nav(class="navbar navbar-inverse navbar-fixed-top" id="navbar1")
-        .container-fluid
-            .navbar-header
-                button.navbar-toggle(type="button" data-toggle="collapse" data-target="#myNavbar")
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a.navbar-brand(href="#companyName") DELONIFR
-            #myNavbar.collapse.navbar-collapse
-                ul.nav.navbar-nav
-                    li
-                        a(href="#companyDesc") Company
-                    li
-                        a(href="#myCarousel") Pics
-                    li
-                        a(href="#work") Work
-                    li
-                        a(href="#myQuote") Contact
+nav(class="navbar navbar-inverse navbar-fixed-top" id="navbar1")
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle(type="button" data-toggle="collapse" data-target="#myNavbar")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#companyName") DELONIFR
+        #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li
+                    a(href="#companyDesc") Company
+                li
+                    a(href="#myCarousel") Pics
+                li
+                    a(href="#work") Work
+                li
+                    a(href="#myQuote") Contact
 
-                    //li(class="dropdown")
-                        a(class="dropdown-toggle" data-toggle="dropdown" href="#") Section 4
-                            span(class="caret")
-                        ul(class="dropdown-menu")
-                            li
-                                a(href="#section41") Section 4-1
-                            li
-                                a(href="#section42") Section 4-2
+    script.
+      $("#navbar1").hide(); // Hide the navigation bar first
+
+      $(window).scroll(function () {  //Listen for the window's scroll event
+        if(isScrolledAfterElement("#aboutUs")) { //if it has scrolled beyond the #content element
+          $('#navbar1').fadeIn();  // Show the navigation bar
+        } else {
+          $('#navbar1').fadeOut(); // Else hide it
+        }
+      });
+
+      //Function that returns true if the window has scrolled beyond the given element
+      function isScrolledAfterElement(elem) {
+        var $window = $(window);
+        var docViewTop = $window.scrollTop();
+        //var docViewBottom = docViewTop + $window.height();
+        return $(elem).offset().top <= docViewTop;
+      }

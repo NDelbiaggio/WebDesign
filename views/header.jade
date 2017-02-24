@@ -1,2 +1,20 @@
-#companyName.container
+//#companyName.container
     img(class="img-responsive" src="images/header_company.png")
+
+#mainPage
+  ul.fly-in-text.unshown
+    li D
+    li E
+    li L
+    li O
+    li N
+    li I
+    li F
+    li R
+
+  script.
+    $(function(){
+      setTimeout(function(){
+        $('.fly-in-text').removeClass('unshown');
+      }, 300);
+    });
