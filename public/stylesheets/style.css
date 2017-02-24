@@ -47,14 +47,32 @@ a {
     background-size: cover;
 }
 
-#sectionQuote{
-    display: flex;
-    align-items: center;
-    align-content: center;
+
+#quoteDesc p,#secQuoteHeader h1{
+    color: #fffefd;
 }
 
-#quoteDesc h1, #quoteDesc p{
-    color: #fffefd;
+#quoteDesc p {
+    padding-right: 15px;
+}
+
+
+#btnRequest{
+    /*margin-bottom: 10px;
+    padding-right: 10px;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;*/
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+#myBtn{
+    position: relative;
+
 }
 
 .secLine{
