@@ -45,7 +45,13 @@ a {
 #myQuote {
     background-image: url("/images/parquetry_test.jpg");
     background-size: cover;
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 
 #quoteDesc p,#secQuoteHeader h1{
@@ -74,7 +80,6 @@ a {
     position: relative;
 
 }
-
 .secLine{
     width: 100%;
     color: black;
