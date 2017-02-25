@@ -1,0 +1,47 @@
+/*Quote - main page*/
+
+#myQuote {
+    /*background-image: url("/images/parquetry_test.jpg");*/
+    background-image: url("https://deavita.fr/wp-content/uploads/2015/06/escalier-design-minimaliste-marches-originales-atypiques.jpg");
+    background-size: cover;
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+#quoteDesc p,#secQuoteHeader h1{
+    color: black;
+}
+
+#quoteDesc p {
+    padding-right: 15px;
+}
+
+
+#btnRequest{
+    /*margin-bottom: 10px;
+    padding-right: 10px;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;*/
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+#myBtn{
+    position: relative;
+
+}
+.secLine{
+    width: 100%;
+    color: black;
+    height: 1px;
+    background-color:black;
+    margin: 0px;
+}

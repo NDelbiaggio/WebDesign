@@ -1,0 +1,27 @@
+/*Google maps*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map-outer #address{
+    padding-left: 0;
+}
+
+#map {
+    height: 440px;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color:#FFF
+}
+#map-container {
+    height: 400px
+}
+
+@media all and (max-width: 991px) {
+    #map-outer  {
+        height: 650px
+    }
+}
