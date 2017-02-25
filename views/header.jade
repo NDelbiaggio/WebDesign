@@ -13,13 +13,14 @@
         div
             p swiss made
             #btnInterruptor(onclick="lightUp()")
-                a(href="#aboutUs")
+                a
                     img#interruptor(src="images/interruptor.png")
+//(href="#aboutUs")
 
 script.
     launchMainPage();
 
-    function launchMainPage () {
+    function launchMainPage() {
         setTimeout(function () {
             $('#mainPage .fly-in-text').removeClass('unshown');
         }, 300);
@@ -28,14 +29,22 @@ script.
         }, 2800);
     }
 
-    function mainPageFadeIn(){
+    function mainPageFadeIn() {
         $('#mainPage .fly-in-text').fadeOut();
-        setTimeout(function(){
-          $('#mainPage .fly-in-text').fadeIn();
+        setTimeout(function () {
+            $('#mainPage .fly-in-text').fadeIn();
         }, 500);
     }
 
-    function lightUp(){
-      $('#mainPage').addClass("lightOn");
-      $('#interruptor').fadeOut();
+    function lightUp() {
+        $('#mainPage').addClass("lightOn");
+        $('#interruptor').fadeOut();
+        setTimeout(function(){
+            var hash = "#aboutUs";
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function () {
+                window.location.hash = hash;
+            });
+        },1500)
     }
