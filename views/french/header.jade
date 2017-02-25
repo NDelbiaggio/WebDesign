@@ -1,27 +1,41 @@
-//#companyName.container
-    img(class="img-responsive" src="images/header_company.png")
-
 #mainPage
-    div#mother
-        div#up
-            div#superUp
-                ul.fly-in-text.unshown
-                    li D
-                    li E
-                    li L
-                    li O
-                    li N
-                    li I
-                    li F
-                    li R
-        #slogan.unshown fait par des suisses
-    script.
-        $(function () {
-            setTimeout(function () {
-                $('.fly-in-text').removeClass('unshown');
-            }, 300);
-            setTimeout(function () {
-                $('.fly-in-text').removeClass('unshown');
-            }, 2800);
-        });
+    #up
+        ul.fly-in-text.unshown
+            li D
+            li E
+            li L
+            li O
+            li N
+            li I
+            li F
+            li R
+    #slogan.unshown
+        div
+            p swiss made
+            #btnInterruptor(onclick="lightUp()")
+                a(href="#aboutUs")
+                    img#interruptor(src="images/interruptor.png")
 
+script.
+    launchMainPage();
+
+    function launchMainPage () {
+        setTimeout(function () {
+            $('#mainPage .fly-in-text').removeClass('unshown');
+        }, 300);
+        setTimeout(function () {
+            $('#mainPage #slogan').removeClass('unshown');
+        }, 2800);
+    }
+
+    function mainPageFadeIn(){
+        $('#mainPage .fly-in-text').fadeOut();
+        setTimeout(function(){
+          $('#mainPage .fly-in-text').fadeIn();
+        }, 500);
+    }
+
+    function lightUp(){
+      $('#mainPage').addClass("lightOn");
+      $('#interruptor').fadeOut();
+    }
