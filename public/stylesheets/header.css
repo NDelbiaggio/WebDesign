@@ -1,4 +1,5 @@
 #mainPage {
+    position: relative;
     background-color: #000000;
     background: url("/images/mainpage_wall.jpg");
     width: 100vw;
