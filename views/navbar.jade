@@ -26,21 +26,26 @@ nav(class="navbar navbar-inverse navbar-fixed-top" id="navbar1")
                     li
                       a.english(href="http://localhost:3000/") English
 
-    script.
-      $("#navbar1").hide(); // Hide the navigation bar first
+script.
+  $("#navbar1").hide(); // Hide the navigation bar first
 
-      $(window).scroll(function () {  //Listen for the window's scroll event
-        if(isScrolledAfterElement("#aboutUs")) { //if it has scrolled beyond the #content element
-          $('#navbar1').fadeIn();  // Show the navigation bar
-        } else {
-          $('#navbar1').fadeOut(); // Else hide it
-        }
-      });
+  $(window).scroll(function () {  //Listen for the window's scroll event
+    if(isScrolledAfterElement("#aboutUs")) { //if it has scrolled beyond the #content element
+      $('#navbar1').fadeIn();  // Show the navigation bar
+    } else {
+      $('#navbar1').fadeOut(); // Else hide it
+    }
+  });
 
-      //Function that returns true if the window has scrolled beyond the given element
-      function isScrolledAfterElement(elem) {
-        var $window = $(window);
-        var docViewTop = $window.scrollTop();
-        //var docViewBottom = docViewTop + $window.height();
-        return $(elem).offset().top <= docViewTop;
-      }
+  //Function that returns true if the window has scrolled beyond the given element
+  function isScrolledAfterElement(elem) {
+    var $window = $(window);
+    var docViewTop = $window.scrollTop();
+    //var docViewBottom = docViewTop + $window.height();
+    return $(elem).offset().top <= docViewTop;
+  }
+
+script.
+  window.addEventListener("hashchange", function () {
+      window.scrollTo(window.scrollX, window.scrollY - 51);
+  });

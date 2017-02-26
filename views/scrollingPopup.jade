@@ -66,7 +66,6 @@ script.
         getData(e.target.id, function (res) {
 
             $("#customizedModal").on('show.bs.modal', function (e) {
-                console.log(res);
                 if (res) {
                     $(this).find('.modal-header h4').html(res.header);
                     $(this).find('.modal-body p').html(res.desc);
@@ -118,8 +117,6 @@ script.
         });
 
         $('.btn-scrollPopup').click(function (e) {
-            console.log(e.target);
             var $modal = $("#scrollModal").modal();
         });
-
     });
