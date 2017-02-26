@@ -12,9 +12,10 @@
     #slogan.unshown
         div
             p swiss made
-            #btnInterruptor(onclick="lightUp()")
-                a
-                    img#interruptor(src="images/interruptor.png")
+        #btnLayer(onclick="lightUp()")
+            img#interruptor(src="images/interruptor.png")
+            img#intInside(src="images/interruptor.png")
+
 //(href="#aboutUs")
 
 script.
@@ -38,7 +39,7 @@ script.
 
     function lightUp() {
         $('#mainPage').addClass("lightOn");
-        $('#interruptor').fadeOut();
+        $('#btnLayer').fadeOut();
         setTimeout(function(){
             var hash = "#aboutUs";
             $('html, body').animate({
@@ -46,5 +47,5 @@ script.
             }, 900, function () {
                 window.location.hash = hash;
             });
-        },1500)
+        },800)
     }

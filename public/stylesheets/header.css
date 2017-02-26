@@ -1,15 +1,3 @@
-#interruptor {
-    position: relative;
-    height: 5%;
-    width: 5%;
-    opacity: 0.8;
-}
-
-#interruptor:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
 #mainPage {
     background-color: #000000;
     background: url("/images/mainpage_wall.jpg");
@@ -29,37 +17,6 @@
     background: linear-gradient(to bottom , rgba(0,0,0,0) 80%, rgba(0,0,0,1) 100%),url("/images/mainpage_wall.jpg");
     transition: background 2s ease;
     -webkit-transition: background 2s ease;
-}
-
-#mainPage #slogan {
-  position: relative;
-  text-align: center;
-  opacity: 1;
-  width: 100%;
-  color: white;
-  font-family: "Open Sans";
-  font-size: 2vw;
-  transition: opacity 2.5s ease;
-  -webkit-transition: opacity 2.5s ease;
-
-}
-
-#slogan {
-    position: relative;
-    text-align: center;
-    opacity: 1;
-    width: 100%;
-    color: white;
-    height: 50%;
-    font-family: "Open Sans";
-    font-size: 2vw;
-    transition: opacity 2.5s ease;
-    -webkit-transition: opacity 2.5s ease;
-}
-
-#mother {
-    width: 100%;
-    height: 100%;
 }
 
 #up {
@@ -82,21 +39,6 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0%);
 }
-
-/*
-#mainPage ul.fly-in-text{
-  display: block;
-  white-space:nowrap;
-  position:absolute;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-}
-*/
 
 .fly-in-text li {
     display: inline-block;
@@ -155,3 +97,62 @@
 #mainPage .fly-in-text.unshown li, #mainPage #slogan.unshown {
     opacity: 0;
 }
+
+#slogan {
+    position: relative;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    color: white;
+    height: 50%;
+    font-family: "Open Sans";
+    font-variant: small-caps;
+    font-size: 24px;
+    transition: opacity 2.5s ease;
+    -webkit-transition: opacity 2.5s ease;
+}
+
+#btnLayer{
+    position:relative;
+}
+
+#interruptor {
+    position: relative;
+    max-height: 72px;
+    opacity: 0.8;
+}
+
+#intInside{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 40px;
+    transform: translate(-50%,-50%);
+
+}
+
+#interruptor:hover, #intInside:hover  {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#intInside:active, #interruptor:active{
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    #interruptor{
+        max-width: 50px;
+    }
+    #intInside{
+        max-width: 27px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #slogan{
+        font-size: 20px;
+    }
+}
+
