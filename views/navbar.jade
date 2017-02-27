@@ -29,13 +29,15 @@ nav(class="navbar navbar-inverse navbar-fixed-top" id="navbar1")
 script.
   $("#navbar1").hide(); // Hide the navigation bar first
 
-  $(window).scroll(function () {  //Listen for the window's scroll event
-    if(isScrolledAfterElement("#aboutUs")) { //if it has scrolled beyond the #content element
-      $('#navbar1').fadeIn();  // Show the navigation bar
+    $(window).scroll(function () {  //Listen for the window's scroll event
+        if(isScrolledAfterElement("#anchorNav")) { //if it has scrolled beyond the #content element
+            $('#navbar1').fadeIn();  // Show the navigation bar
     } else {
-      $('#navbar1').fadeOut(); // Else hide it
+        $('#navbar1').fadeOut(); // Else hide it
     }
-  });
+    });
+
+
 
   //Function that returns true if the window has scrolled beyond the given element
   function isScrolledAfterElement(elem) {
