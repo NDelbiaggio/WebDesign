@@ -4,7 +4,7 @@
     /*background-image: url("/images/parquetry_test.jpg");*/
     background-image: url("https://deavita.fr/wp-content/uploads/2015/06/escalier-design-minimaliste-marches-originales-atypiques.jpg");
     background-size: cover;
-    min-height: 200px;
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,15 +16,28 @@
     padding: 10px 0;
 }
 
-.lorem p {
-
+.lorem{
+    padding-bottom: 5px;
 }
+
+.taskCont{
+    display: inline-block;
+    width: 50%;
+}
+
+.contactReasons{
+    display: block;
+    list-style-type: none;
+}
+
+
 
 .myBtn{
     position: relative;
     padding: 18px 0;
     padding-left: 8px;
-    height: 50px;
+    height: 100px;
+
 }
 
 .bt{
@@ -32,6 +45,7 @@
     position: absolute;
     top: 0;
     left: 50%;
+    transform: translate(-50%,0);
     padding: 10px;
     font-size: 16px;
     border-radius: 50%;
@@ -65,10 +79,31 @@
     .lorem {
         display: block;
         width: 50%;
+        padding-bottom: 20px;
     }
     .lorem p {
         margin-bottom: 16px;
     }
+
+    li{
+        text-align: center;
+    }
+
+    ul.contactReasons{
+        text-align: center;
+        font-weight:bold;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        /*white-space: nowrap;*/
+        text-align: left;
+        list-style: none;
+        transition: opacity 1.5s ease-in-out;
+        -webkit-transition: opacity 1.5s ease-in-out;
+        -moz-transition: opacity 1.5s ease-in-out;
+        -o-transition: opacity 1.5s ease-in-out;
+    }
+
     .myBtn {
         display: inline-block;
         width: 39%;
@@ -103,24 +138,6 @@
         width: 110px;
         heigth: 110px;
         cursor: pointer;
-    }
-
-    ul.contactReasons{
-        font-weight:bold;
-        opacity: 1;
-        margin: 0;
-        padding: 0;
-        /*white-space: nowrap;*/
-        text-align: center;
-        list-style: none;
-        transition: opacity 1.5s ease-in-out;
-        -webkit-transition: opacity 1.5s ease-in-out;
-        -moz-transition: opacity 1.5s ease-in-out;
-        -o-transition: opacity 1.5s ease-in-out;
-    }
-
-    ul li {
-        display: inline-block;
     }
 
 }
