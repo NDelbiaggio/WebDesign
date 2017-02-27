@@ -1,4 +1,4 @@
-#myQuote
+//#myQuote
     .container
         .title
             h1 Looking for a quote
@@ -7,18 +7,57 @@
                 p Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
                 .taskContParentdiv
                     .taskCont
-                        ul.contactReasons
+                        ul.contactReasons.slidingIn.invisible.leftBloc.border
                             li Ceiling
                             li Internet
                             li Stairs
                     .taskCont
-                        ul.contactReasons
+                        ul.contactReasons.slidingIn.invisible.rightBloc.border
                             li Walls
                             li Isolation
-                            li and more
-            .myBtn
+                            li & more
+
+
+
+#myQuote
+    .container
+        .title
+            h1 Looking for a quote
+        #contBody
+            .contBoxHalf
+                .secBlock.border
+                    .secBlockContent
+                        p Construction
+                        ul
+                            li content
+                            li content
+                            li content
+                .secBlock.border
+                    .secBlockContent
+                        p Renovation
+                        ul
+                            li content
+                            li content
+                            li content
+            .contBoxHalf
+                .secBlock.border
+                    .secBlockContent
+                        p Information
+                        ul
+                            li content
+                            li content
+                            li content
+                .secBlock.border
+                    .secBlockContent
+                        p & More
+                        ul
+                            li content
+                            li content
+                            li content
+            .myBtn.border
                 .bt
                     p Contact us
+
 
 script.
     $(document).ready(function () {

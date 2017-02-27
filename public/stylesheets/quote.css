@@ -1,5 +1,6 @@
 /*Quote - main page*/
 
+
 #myQuote {
     /*background-image: url("/images/parquetry_test.jpg");*/
     background-image: url("https://deavita.fr/wp-content/uploads/2015/06/escalier-design-minimaliste-marches-originales-atypiques.jpg");
@@ -8,40 +9,63 @@
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 20px ;
 }
 
+#contBody{
+    position: relative;
+    width: 100%;
 
-.title h1{
-    margin: 0;
-    padding: 10px 0;
 }
 
-.lorem{
-    padding-bottom: 5px;
+#myQuote #contBody ul{text-align: left;}
+#myQuote #contBody ul li{
+    height:20px;
 }
-
-.taskCont{
-    display: inline-block;
+.contBoxHalf {
     width: 50%;
+    height: 300px;
+    display: inline-block;
 }
 
-.contactReasons{
+.secBlock{
+    position: relative;
+    height: 50%;
+    width: 100%;
     display: block;
-    list-style-type: none;
 }
 
-.contactReasons li{
+.secBlockContent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    width: 60%;
+    min-width: 100px;
+    text-align: center;
+    /*line-height: 50px;*/
     color: white;
     background-color: rgba(255, 255, 255, 0.4);
-    display: block;
     border-radius: 10px;
-    margin-bottom: 15px;
-    width: 100px;
-    padding: 10px;
+    padding: 0px;
+    overflow: scroll;
 }
 
+.secBlockContent p{
+    margin: 0;
+    /*line-height: 1;*/
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+
 .myBtn{
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     padding: 18px 0;
     padding-left: 8px;
     height: 100px;
@@ -79,62 +103,4 @@
     margin: 0;
 }
 
-.border{
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-}
 
-@media screen and (min-width: 970px) {
-    .bodyt {
-        display: flex;
-    }
-    .lorem {
-        display: block;
-        width: 50%;
-        padding-bottom: 20px;
-    }
-    .lorem p {
-        margin-bottom: 16px;
-    }
-
-    li{
-        text-align: center;
-    }
-
-    ul.contactReasons{
-        text-align: center;
-        font-weight:bold;
-        opacity: 1;
-        margin: 0;
-        padding: 0;
-        /*white-space: nowrap;*/
-        text-align: left;
-        list-style: none;
-        transition: opacity 1.5s ease-in-out;
-        -webkit-transition: opacity 1.5s ease-in-out;
-        -moz-transition: opacity 1.5s ease-in-out;
-        -o-transition: opacity 1.5s ease-in-out;
-    }
-
-    .myBtn {
-        display: inline-block;
-        width: 39%;
-        flex: 1;
-        height: auto;
-    }
-
-    .bt {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        padding: 0;
-        transform: translate(-50%,-50%);
-    }
-
-    .bt:hover{
-        cursor: pointer;
-        position: absolute;
-    }
-
-}

@@ -9,6 +9,10 @@ html, body {
     padding-top: 40px;
 }
 
+#ourLocation{
+    margin-top: 20px;
+}
+
 #map-outer #address{
     padding-left: 0;
 }
