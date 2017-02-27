@@ -113,158 +113,16 @@
 
     .bt {
         position: absolute;
+        background: #a40100;
         top: 50%;
         left: 50%;
         padding: 0;
         transform: translate(-50%,-50%);
     }
 
-    .bt.btn-above:hover{
+    .bt:hover{
         cursor: pointer;
         position: absolute;
-
-        -moz-box-shadow: inset 0px 0px 0px rgba(255,255,255,.3);
-        -webkit-box-shadow: inset 0px 0px 0px rgba(255,255,255,.3);
-        -o-box-shadow: inset 0px 0px 0px rgba(255,255,255,.3);
-        box-shadow: inset 0px 0px 0px #dba36c;
-    }
-/*
-    .bt.btn-behind{
-        border-style: solid;
-        border-width: 1px;
-        border-color: #dba36c;
-        transition: all .3s ease-in-out;
-
     }
 
-    .bt.btn-behind:hover{
-        width: 110px;
-        heigth: 110px;
-        cursor: pointer;
-        box-shadow: inset 0px 0px #dba36c;
-    }
-*/
-}
-
-/* BTN TEST */
-
-.ch-grid {
-    width: 220px;
-    height: 220px;
-    margin: 50px;
-    margin: 20px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: block;
-    text-align: center;
-}
-.ch-grid:after,
-.ch-item:before {
-    content: '';
-    display: table;
-}
-.ch-grid:after {
-    clear: both;
-}
-
-.ch-item {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    position: absolute;
-    cursor: default;
-    box-shadow:
-            inset 0 0 0 0 rgba(200,95,66, 0.4),
-            inset 0 0 0 16px rgba(255,255,255,0.6),
-            0 1px 2px rgba(0,0,0,0.1);
-
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-
-.ch-img {
-    background-color: mintcream;
-    width: inherit;
-    height: inherit;
-}
-
-.ch-item.ch-img h3 {
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-    font-size: 22px;
-    padding: 65px 0 0 0;
-    font-family: 'Open Sans', Arial, sans-serif;
-    text-shadow:
-            0 0 1px #fff,
-            0 1px 2px rgba(0,0,0,0.3);
-}
-
-.ch-item:hover {
-    box-shadow:
-            inset 0 0 0 110px rgba(200,95,66, 0.4),
-            inset 0 0 0 16px rgba(255,255,255,0.8),
-            0 1px 2px rgba(0,0,0,0.1);
-}
-
-.ch-item.ch-img h3.ch-info-above{
-    opacity: 1;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-
-.ch-item.ch-img h3.ch-info-above:hover{
-    opacity: 0;
-}
-
-.ch-item:hover .ch-info {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
-
-.ch-info {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    opacity: 0;
-
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0) translate(0, 0);
-
-    -webkit-backface-visibility: hidden; /*for a smooth font */
-
-}
-
-.ch-info h3 {
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-    letter-spacing: 2px;
-    font-size: 22px;
-    padding: 65px 0 0 0;
-    font-family: 'Open Sans', Arial, sans-serif;
-    text-shadow:
-            0 0 1px #fff,
-            0 1px 2px rgba(0,0,0,0.3);
 }
