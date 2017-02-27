@@ -30,14 +30,14 @@
     list-style-type: none;
 }
 
-
-
 .myBtn{
     position: relative;
     padding: 18px 0;
     padding-left: 8px;
     height: 100px;
-
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .bt{
@@ -113,31 +113,16 @@
 
     .bt {
         position: absolute;
+        background: #a40100;
         top: 50%;
         left: 50%;
+        padding: 0;
         transform: translate(-50%,-50%);
     }
 
-    .bt.btn-above:hover{
+    .bt:hover{
         cursor: pointer;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .bt.btn-behind{
-        border-style: solid;
-        border-width: 1px;
-        border-color: #dba36c;
-        transition: all .3s ease-in-out;
-    }
-
-    .bt.btn-behind:hover{
-        border-width: 10px;
-        width: 110px;
-        heigth: 110px;
-        cursor: pointer;
     }
 
 }

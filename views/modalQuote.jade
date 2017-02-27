@@ -1,10 +1,10 @@
 #myModal.modal.fade(role="dialog")
     .modal-dialog
         .modal-content
-            #headerQuote.modal-header(style="padding:35px 50px;")
+            #headerQuote.modal-header
                 button.close(type='button', data-dismiss='modal') ×
-                img#logo-sm(src="images/header_company.png")
-                h4 Ask for a quote
+                h1 DELONIFR
+                h4 Contact form
 
             .modal-body(style='padding:40px 50px;')
                 form(role='form')
@@ -45,8 +45,9 @@
                             input#custEmail.form-control(type='text', placeholder='email_address@mail.com' required="required")
                     .form-group
                         label(for='typeOfWork')
-                            | Type of work
+                            | Purpose
                         select#typeOfWork.form-control
+                            option information
                             option renovation
                             option construction
                     .form-group
