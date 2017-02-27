@@ -1,12 +1,12 @@
 function initMap() {
 
-    var myLatLng = {lat: 60.200600, lng: 24.937500};
+    var myLatLng = {lat: 60.200600, lng: 24.957500};
 
     var options = {
         center: myLatLng,
-        zoom: 16,
+        zoom: 14,
         scrollwheel: false,
-        minZoom: 14,
+        minZoom: 10,
         maxZoom: 18
 
 
@@ -22,7 +22,9 @@ function initMap() {
         label: 'DELONIFR'
     });
 
-    var contentString = '<div id="content">'+
+    var contentString = '<div id="commentBlock"> <h1>hello</h1></div>'
+        /*
+        '<div id="content">'+
         '<div id="siteNotice">'+
         '</div>'+
         '<h1 id="firstHeading" class="firstHeading">DELONIFR</h1>'+
@@ -41,7 +43,7 @@ function initMap() {
         'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
         '(last visited June 22, 2009).</p>'+
         '</div>'+
-        '</div>';
+        '</div>';*/
 
     var infowindow = new google.maps.InfoWindow({
         content: contentString
